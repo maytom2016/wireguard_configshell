@@ -1,4 +1,4 @@
-**中文** | [English](none)
+**中文** | [English](https://github.com/maytom2016/wireguard_autoconfig/blob/main/README.md)
 # wireguard_autoconfig
 # 在openwrt快速配置wireguard
 
