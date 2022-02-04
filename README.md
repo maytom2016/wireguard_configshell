@@ -1,0 +1,2 @@
+# wireguard_autoconfig
+在openwrt快速配置wireguard
