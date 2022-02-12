@@ -47,9 +47,13 @@ wireguard-tools
 
 将0.0.0.0替换成你的连接IP地址
 
-### 第三步，找到配置文件
+### 第三步，执行autoconfigwireguard.ps1，并找到配置文件
 
-你可以在/win/conf目录中，服务器配置文件为wg0.conf，客户端配置为c01-0x.conf。
+你可以直接使用powershell打开，也可能用cmd在目录下执行如下命令：
+
+`powershell.exe .\autoconfigwireguard.ps1`
+
+你可以在/win/conf目录中，服务器配置文件为wg0.conf，客户端配置为c1-c*.conf。
 
 将配置分别导入对应主机中就可以使用。
 
