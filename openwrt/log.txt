@@ -1,0 +1,23 @@
+BusyBox v1.33.1 (2021-07-30 15:46:39 UTC) built-in shell (ash)
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ --------------------------------------------------
+  OpenWrt GDQ v9.1[2021] | by "eSir PlayGround"
+ --------------------------------------------------
+
+root@OpenWrt:~# sh run.sh
+,50
+no change!
+wg path isn't exist,create key file now
+seting wireguard server config now
+finished set up wireguard server! beginning seting up wireguard peers
+finished set up wireguard peers,you can get configuration file from wg path
+if
+finished all works,you need reboot to apply configs
+root@OpenWrt:~# reboot
+root@OpenWrt:~#
+
