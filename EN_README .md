@@ -44,7 +44,7 @@ Go to the win folder.
 
 Replace 0.0.0.0 with your connection IP address
 
-### The third step is to edit ipport.conf
+### The third step is to locate the configuration file
 
 You can configure the server configuration file as wg0.conf and the client configuration as c01-0x.conf in the /win/conf directory.
 

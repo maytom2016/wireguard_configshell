@@ -47,7 +47,7 @@ wireguard-tools
 
 将0.0.0.0替换成你的连接IP地址
 
-### 第三步，编辑ipport.conf
+### 第三步，找到配置文件
 
 你可以在/win/conf目录中，服务器配置文件为wg0.conf，客户端配置为c01-0x.conf。
 
