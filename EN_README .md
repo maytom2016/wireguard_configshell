@@ -4,7 +4,7 @@
 ![GitHub Stars](https://img.shields.io/github/stars/maytom2016/wireguard_autoconfig.svg?style=flat-square&label=Stars&logo=github)
 ![GitHub Forks](https://img.shields.io/github/forks/maytom2016/wireguard_autoconfig.svg?style=flat-square&label=Forks&logo=github)
 
-## Quickly configure wireguard in openwrt
+## Quickly configure wireguard in openwrt，openwrt as the server
 This script can help you quickly deploy wireguard on openwrt, generate 3 users for you, first of all, you need to confirm that your openwrt has the following wireguard related components installed.
 
 mod-wireguard
