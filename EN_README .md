@@ -14,7 +14,7 @@ wireguard-tools
 
 ### Now,lets get start.Download the project file locally and upload all the project files to openwrt using tools such as WINSCP
 
-`git clone https://github.com/maytom2016/wireguard_autoconfig.git`
+`git clone https://github.com/maytom2016/wireguard_configshell.git`
 
 then edit ipport.conf 
 
@@ -34,7 +34,7 @@ You can refer to the contents of the log .txt to operate. After success, you nee
 
 ### The first step is to download the project file locally.
 
-`git clone https://github.com/maytom2016/wireguard_autoconfig.git`
+`git clone https://github.com/maytom2016/wireguard_configshell.git`
 
 Go to the win folder.
 
