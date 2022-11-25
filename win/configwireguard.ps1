@@ -1,8 +1,8 @@
-#V1.0ÓÉmaytom2016´´½¨ÓÚ2022-02-12
+#V1.0ç”±maytom2016åˆ›å»ºäº2022-02-12
 
 function GetServer([REF]$spri,[REF]$spub)
 {
-#ÅĞ¶ÏserverÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ
+#åˆ¤æ–­serveræ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨
 $Fexist=Test-Path .\server
 if(! $Fexist)
 {
@@ -10,14 +10,14 @@ New-item -path .\ -name server -type directory
 }
 
 $Fexist=Test-Path .\server\sprivatekey
-#ÅĞ¶ÏserverÅäÖÃÊÇ·ñ´æÔÚ
+#åˆ¤æ–­serveré…ç½®æ˜¯å¦å­˜åœ¨
  if(! $Fexist)
  {
   wg genkey | tee sprivatekey | wg pubkey > spublickey
-  #ÒÆ¶¯ÎÄ¼şµ½×ÓÎÄ¼ş¼ĞÖĞ
+  #ç§»åŠ¨æ–‡ä»¶åˆ°å­æ–‡ä»¶å¤¹ä¸­
   Move-Item .\sprivatekey .\server\sprivatekey
   Move-Item .\spublickey .\server\spublickey
-   #»ñµÃserverÃÜÔ¿
+   #è·å¾—serverå¯†é’¥
   $spri.Value = Get-Content .\server\sprivatekey
   $spub.Value = Get-Content .\server\spublickey
  }
@@ -28,13 +28,13 @@ $Fexist=Test-Path .\server\sprivatekey
  }
 }
 
-#ÖÆ×÷wg0ÅäÖÃÎÄ¼ş
+#åˆ¶ä½œwg0é…ç½®æ–‡ä»¶
 function MakeServerConfig()
 {
   $pri=1
   $pub=1
   GetServer ([REF]$pri) ([REF]$pub)
-#ÅĞ¶ÏconfigÄ¿Â¼ÊÇ·ñ´æÔÚ
+#åˆ¤æ–­configç›®å½•æ˜¯å¦å­˜åœ¨
  $Fexist=Test-Path .\config
  if(! $Fexist)
  {
@@ -54,7 +54,7 @@ function MakeServerConfig()
  }
  else
  {
-  echo "wg0ÅäÖÃÎÄ¼ş´æÔÚ!ÎŞĞëÖØ¸´´´½¨"
+  echo "wg0é…ç½®æ–‡ä»¶å­˜åœ¨!æ— é¡»é‡å¤åˆ›å»º"
  }
 }
 function RetServerConfig
@@ -71,31 +71,31 @@ function RetServerConfig
 
 function GetClient($num,[REF]$cpri,[REF]$cpub,[REF]$csh)
 {
-#ÅĞ¶ÏclientÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ
+#åˆ¤æ–­clientæ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨
 $Fexist=Test-Path .\client
 if(! $Fexist)
 {
 New-item -path .\ -name client -type directory
 }
 $Fexist=Test-Path (".\client\cprivatekey"+$num)
-#ÅĞ¶ÏclientÅäÖÃÊÇ·ñ´æÔÚ
+#åˆ¤æ–­clienté…ç½®æ˜¯å¦å­˜åœ¨
  if(! $Fexist)
  {
   wg genkey | tee (".\cprivatekey"+$num) | wg pubkey > (".\cpublickey"+$num)
   wg genpsk > (".\sharekey"+$num)
-  #ÒÆ¶¯ÎÄ¼şµ½×ÓÎÄ¼ş¼ĞÖĞ
+  #ç§»åŠ¨æ–‡ä»¶åˆ°å­æ–‡ä»¶å¤¹ä¸­
   Move-Item (".\cprivatekey"+$num) (".\client\cprivatekey"+$num)
   Move-Item (".\cpublickey"+$num) (".\client\cpublickey"+$num)
   Move-Item (".\sharekey"+$num) (".\client\sharekey"+$num)
-  #»ñµÃclientÃÜÔ¿
+  #è·å¾—clientå¯†é’¥
   $cpri.Value = Get-Content (".\client\cprivatekey"+$num)
   $cpub.Value = Get-Content (".\client\cpublickey"+$num)
   $csh.Value=Get-Content(".\client\sharekey"+$num)
  }
  else
  {
-  #»ñµÃclientÃÜÔ¿
-  echo (".\client\cprivatekey"+$num+"ÎÄ¼ş´æÔÚ")
+  #è·å¾—clientå¯†é’¥
+  echo (".\client\cprivatekey"+$num+"æ–‡ä»¶å­˜åœ¨")
   $cpri.Value = Get-Content (".\client\cprivatekey"+$num)
   $cpub.Value = Get-Content (".\client\cpublickey"+$num)
   $csh.Value=Get-Content(".\client\sharekey"+$num)
@@ -153,5 +153,5 @@ function MakeClientConfig ($clientnum,$cpri,$csh,$spub)
    Set-Content -Path (".\config\c" + $clientnum + ".conf") -Value ($cfile)
 }
 
-#Ìí¼ÓÈı¸ö¿Í»§¶Ë
+#æ·»åŠ ä¸‰ä¸ªå®¢æˆ·ç«¯
 AddClientConfig 3
