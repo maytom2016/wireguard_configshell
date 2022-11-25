@@ -44,11 +44,11 @@ Go to the win folder.
 
 Replace 0.0.0.0 with your connection IP address
 
-### In the third step, execute autoconfigwireguard.ps1 and locate the configuration file
+### In the third step, execute configwireguard.ps1 and locate the configuration file
 
 You can use powershell to open it directly, or you can use cmd to execute the following command in the directory:
 
-`powershell.exe .autoconfigwireguard.ps1`
+`powershell.exe .configwireguard.ps1`
 
 You can configure the server configuration file as wg0.conf and the client configuration as c1-c*.conf in the /win/conf directory.
 
