@@ -17,7 +17,7 @@ wireguard-tools
 
 ### 第一步，下载项目文件到本地，并使用WINSCP等工具将项目文件全部上传到openwrt
 
-`git clone https://github.com/maytom2016/wireguard_autoconfig.git`
+`git clone https://github.com/maytom2016/wireguard_configshell.git`
 
 并编辑ipport.conf
 
@@ -37,7 +37,7 @@ wireguard-tools
 
 ### 第一步，下载项目文件到本地。
 
-`git clone https://github.com/maytom2016/wireguard_autoconfig.git`
+`git clone https://github.com/maytom2016/wireguard_configshell.git`
 
 进入win文件夹。
 
