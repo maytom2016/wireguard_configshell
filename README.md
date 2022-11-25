@@ -51,7 +51,7 @@ wireguard-tools
 
 你可以直接使用powershell打开，也可能用cmd在目录下执行如下命令：
 
-`powershell.exe .\autoconfigwireguard.ps1`
+`powershell.exe .\configwireguard.ps1`
 
 你可以在/win/conf目录中，服务器配置文件为wg0.conf，客户端配置为c1-c*.conf。
 
