@@ -47,7 +47,7 @@ wireguard-tools
 
 将0.0.0.0替换成你的连接IP地址
 
-### 第三步，执行autoconfigwireguard.ps1，并找到配置文件
+### 第三步，执行configwireguard.ps1，并找到配置文件
 
 你可以直接使用powershell打开，也可能用cmd在目录下执行如下命令：
 
