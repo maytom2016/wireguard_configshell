@@ -9,5 +9,5 @@ sed -i "s/option network 'lan'/option network 'lan wg0'/" /etc/config/firewall
 fi
 rule=$(sed -n "/192.168.100.0/=" /etc/firewall.user)
 if [ ! -n "$rule" ]; then
-echo "iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE" >>/etc/firewall.user
+echo "iptables -t nat -A POSTROUTING -o br-lan -j MASQUERADE" >>/etc/firewall.user
 fi
