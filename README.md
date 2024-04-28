@@ -49,7 +49,7 @@ wireguard-tools
 
 ### 第三步，执行configwireguard.ps1，并找到配置文件
 
-你可以直接使用powershell打开，也可能用cmd在目录下执行如下命令：
+你可以直接使用powershell打开，也可以用cmd在目录下执行如下命令：
 
 `powershell.exe .\configwireguard.ps1`
 
