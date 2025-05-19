@@ -6,13 +6,15 @@
 
 ## Quickly configure wireguard in openwrt，openwrt as the server
 This script can help you quickly deploy wireguard on openwrt, generate 3 users for you, first of all, you need to confirm that your openwrt has the following wireguard related components installed.
-
-mod-wireguard
+```
+kmod-wireguard
 luci-app-wireguard
 luci-proto-wireguard
 wireguard-tools
-
+```
 ### Now,lets get start.Download the project file locally and upload all the project files to openwrt using tools such as WINSCP
+
+or you can git clone.
 
 `git clone https://github.com/maytom2016/wireguard_configshell.git`
 
@@ -20,7 +22,9 @@ then edit ipport.conf
 
 `0.0.0.0:23456`
 
-replace 0.0.0.0 to your public ip
+Replace 0.0.0.0 to your public ip or your domain.Such as example.com
+
+`example.com:23456`
 
 ### In the second step, use SSH or TTY to connect to the openwrt background and use the following command to execute the script
 
